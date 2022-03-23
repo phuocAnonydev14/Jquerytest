@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./validate-form.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <form action="" id="form">
+        <div class="box">
+            <div class="input-check">
+                <p>name</p>
+              <input name = 'name' type="text">
+            </div>
+            <div class="input-check">
+                <p>email</p>
+                <input name="email" type="text">
+            </div>
+            <div class="input-check">
+                <p>password</p>
+                <input name="password" type="text">
+            </div>
+            <div class="input-check">
+                <p>phone</p>
+                <input name = 'phone' type="text">
+            </div>
+                <button class="submit" type="submit" >submit
+                    </button>
+        </div>
+      </form>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./jquery-validation-1.19.3/dist/additional-methods.min.js"></script>
+    <script src="./jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
+
+    <script>
+        $("#form").validate({
+            rules: {
+    // simple rule, converted to {required:true}
+    name: "required",
+    // compound rule
+    email: {
+      required: true,
+      email: true
+    }
+  }
+        });
+    </script>
+  </body>
+</html>
