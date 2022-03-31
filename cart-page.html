@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Cart-page</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./card-page.css">
+</head>
+
+<body>
+    <header class="box">
+        <div class="logo ">
+            <img class="card-img" src="./images/logo.png" alt="">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="./mainpage.html">Trang chủ</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">Tổng quan về công ty</a></li>
+                        <li><a href="#">Lịch sử hình thành</a></li>
+                        <li><a href="#">Tầm nhìn-Sứ mệnh</a></li>
+                        <li><a href="#">Câu chuyện thương hiệu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">giới thiệu</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">Tổng quan về công ty</a></li>
+                        <li><a href="#">Lịch sử hình thành</a></li>
+                        <li><a href="#">Tầm nhìn-Sứ mệnh</a></li>
+                        <li><a href="#">Câu chuyện thương hiệu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Khách hàng doanh nghiệp</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">Tổng quan về công ty</a></li>
+
+
+                        <li><a href="#">Lịch sử hình thành</a></li>
+                        <li><a href="#">Tầm nhìn-Sứ mệnh</a></li>
+                        <li><a href="#">Câu chuyện thương hiệu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sanPham">Sản phẩm</a>
+                </li>
+                <li><a href="#magazine">Hệ thống cửa hàng</a></li>
+                <li><a href="./validate-form.html">Sign Up</a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <ul class="sub_menu last-sub">
+                        <input type="text">
+                    </ul>
+                </li>
+                <li><a href="./cart-page.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </nav>
+        <div class="icon-responsive">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <div class="modal-body">
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+            <span class="cart-price cart-header cart-column">Giá</span>
+            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+        </div>
+        <div class="cart-items">
+            <div class="cart-row group">
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image"
+                        src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sualai.jpg?v=1573720306000"
+                        width="100" height="100">
+                    <span class="cart-item-title">Mũi Hàn 500dsffsd g fhsfdgnfsigfjngklfshgldsjflkdsjfdsj g
+                        fshughsfldjdsfjdakfkdsjfgslgjklsdjfkldsjfkldsjfkldsfjkl</span>
+                </div>
+                <span class="cart-price cart-column">25000 <span>đ</span></span>
+                <div class="cart-quantity cart-column">
+                    <input class="cart-quantity-input" type="number" value="1">
+                    <button class="btn btn-danger" type="button">Xóa</button>
+                </div>
+            </div>
+            <div class="cart-row group">
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image"
+                        src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sp1-a45a32a1-38d4-4a8a-9c37-e936013858b2.jpg?v=1575877003000"
+                        width="100" height="100">
+                    <span class="cart-item-title">Máy Bơm Chìm Hộ Gia Đình QDX 1500W 220VAC 40L/1min H=8m</span>
+                </div>
+                <span class="cart-price cart-column">1599000<span>đ</span></span>
+                <div class="cart-quantity cart-column">
+                    <input class="cart-quantity-input" type="number" value="2">
+                    <button class="btn btn-danger" type="button">Xóa</button>
+                </div>
+            </div>
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Tổng Cộng:</strong>
+            <span class="cart-total-price">0 <span> VNĐ</span></span>
+        </div>
+        <button class="remove">Remove All</button>
+
+    </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="./bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="./OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script>
+        var arrName = JSON.parse(localStorage.getItem("cartProduct"))
+        var arrPrice = JSON.parse(localStorage.getItem("cartPrice"))
+        var arrImg = JSON.parse(localStorage.getItem("cartImg"))
+        console.log(arrName);
+        var num1 = []
+        for (let key in arrName) {
+            num1 += `<div class="cart-row group">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image"
+                                    src="${arrImg[key]}"
+                                    width="100" height="100">
+                                <span class="cart-item-title">${arrName[key]}</span>
+                            </div>
+                            <span id="cart-price" class="cart-price1 cart-price cart-column">${arrPrice[key]}</span>
+                            <div class="cart-quantity cart-column">
+                                <button class="calc" id="plus">+</button>
+                                <input type="text" id="quantity" value="1">
+                                <button class="calc" id="subtract">-</button>
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
+                        </div>`
+        }
+        $(".cart-items").append(num1)
+        var arrName1 = JSON.parse(localStorage.getItem("cartProduct1"))
+        var arrPrice1 = JSON.parse(localStorage.getItem("cartPrice1"))
+        var arrImg1 = JSON.parse(localStorage.getItem("cartImg1"))
+        console.log(arrName);
+        var num2 = []
+        for (let key in arrName1) {
+            num2 += `<div class="cart-row group">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image"
+                                    src="${arrImg1[key]}"
+                                    width="100" height="100">
+                                <span class="cart-item-title">${arrName1[key]}</span>
+                            </div>
+                            <span id="cart-price" class="cart-price1 cart-price cart-column">${arrPrice1[key]}</span>
+                            <div class="cart-quantity cart-column">
+                                <button class="calc" id="plus">+</button>
+                                <input type="text" id="quantity" value="1">
+                                <button class="calc" id="subtract">-</button>
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
+                        </div>`
+        }
+        console.log(num1 + num2);
+        $(".cart-items").html(num1 + num2)
+        var sum = 0
+        var arrPriceAll = [arrPrice]
+        for (const iterator of arrPrice1) {
+            arrPriceAll.push(iterator)
+        }
+        console.log(arrPriceAll[3]);
+        console.log(arrPriceAll);
+        var cart_price = document.querySelectorAll("#cart-price")
+        console.log(cart_price);
+        var plus = document.querySelectorAll("#plus")
+        var quantity = document.querySelectorAll("#quantity")
+        var subtract = document.querySelectorAll("#subtract")
+        var hell = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        console.log(plus);
+        var prices = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        for (let i = 0; i < plus.length; i++) {
+            prices[i] = parseInt(arrPriceAll[i])
+            plus[i].addEventListener('click', () => {
+                quantity[i].value = parseInt(quantity[i].value) + 1
+                // console.log(prices);
+                prices[i] += parseInt(arrPriceAll[i])
+                cart_price[i].innerHTML = prices[i]
+                hell[i] = cart_price[i].innerHTML
+                // $(".cart-total-price").html(`${sum} $`)
+                var sumSub = 0
+                for (let i = 0; i < cart_price.length; i++) {
+                    // alert(parseInt(cart_price[i].innerHTML));
+                    sumSub += parseInt(hell[i])
+                    $(".cart-total-price").html(`${sumSub} $`)
+                }
+            })
+            subtract[i].addEventListener('click', () => {
+                if (parseInt(quantity[i].value) == 1) {
+                    parseInt(quantity[i].value) == 1
+                    cart_price[i].innerHTML = parseInt(arrPriceAll[i])
+                    hell[i] = cart_price[i].innerHTML
+                    console.log(hell[i]);
+                    // $(".cart-total-price").html(`${sum - parseInt(arrPriceAll[i])} $`)
+                } else {
+                    quantity[i].value = parseInt(quantity[i].value) - 1
+                    prices[i] -= parseInt(arrPriceAll[i])
+                    cart_price[i].innerHTML = prices[i]
+                    sum -= prices[i]
+                    sessionStorage.setItem("gia", prices[i])
+                    hell[i] = cart_price[i].innerHTML
+                    var sumSub = 0
+                    for (let i = 0; i < cart_price.length; i++) {
+                        // alert(parseInt(cart_price[i].innerHTML));
+                        sumSub += parseInt(hell[i])
+                        $(".cart-total-price").html(`${sumSub} $`)
+                    }
+                }
+                if (parseInt(quantity[i].value) == 1) {
+
+                    // $(".cart-total-price").html(`${parseInt(arrPriceAll[i])} $`)
+                }
+            })
+
+        }
+        console.log(sum);
+
+        var button1 = document.querySelectorAll(".btn")
+        var group = document.querySelectorAll(".group")
+        for (let key = 0; key < button1.length; key++) {
+            button1[key].addEventListener("click", () => {
+                group[key].style.display = "none"
+            })
+        }
+
+        //remove local storage
+        $(".remove").click(() => {
+            localStorage.removeItem("cartProduct")
+            localStorage.removeItem("cartPrice")
+            localStorage.removeItem("cartImg")
+            localStorage.removeItem("cartProduct1")
+            localStorage.removeItem("cartPrice1")
+            localStorage.removeItem("cartImg1")
+            $(".cart-items").css("display", 'none')
+            alert("you removed all")
+        })
+
+
+        $(".icon-responsive").click(() => {
+            $(".menu").toggleClass("flex")
+        })
+    </script>
+</body>
+
+</html>

@@ -1,57 +1,249 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./validate-form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
-      <form action="" id="form">
-        <div class="box">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="box">
+        <div class="logo ">
+            <img class="card-img" src="./images/logo.png" alt="">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="./mainpage.html">Trang chủ</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">Tổng quan về công ty</a></li>
+                        <li><a href="#">Lịch sử hình thành</a></li>
+                        <li><a href="#">Tầm nhìn-Sứ mệnh</a></li>
+                        <li><a href="#">Câu chuyện thương hiệu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">giới thiệu</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">Tổng quan về công ty</a></li>
+                        <li><a href="#">Lịch sử hình thành</a></li>
+                        <li><a href="#">Tầm nhìn-Sứ mệnh</a></li>
+                        <li><a href="#">Câu chuyện thương hiệu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Khách hàng doanh nghiệp</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">Tổng quan về công ty</a></li>
+
+
+                        <li><a href="#">Lịch sử hình thành</a></li>
+                        <li><a href="#">Tầm nhìn-Sứ mệnh</a></li>
+                        <li><a href="#">Câu chuyện thương hiệu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sanPham">Sản phẩm</a>
+                </li>
+                <li><a href="#magazine">Hệ thống cửa hàng</a></li>
+                <li><a href="./validate-form.html">Sign Up</a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <ul class="sub_menu last-sub">
+                        <input class="check-input" type="text">
+                    </ul>
+                </li>
+                <li><a href="./cart-page.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </nav>
+        <div class="icon-responsive">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <form action="" id="form">
+        <div class="box1">
+            <h3>Sign Up</h3>
             <div class="input-check">
-                <p>name</p>
-              <input name = 'name' type="text">
+                <p id="check-name">name</p>
+                <input name='name' class="name" type="text">
             </div>
             <div class="input-check">
-                <p>email</p>
-                <input name="email" type="text">
+                <p id="check-name">email</p>
+                <input name="email" class="check-input" type="text">
             </div>
             <div class="input-check">
                 <p>password</p>
-                <input name="password" type="text">
+                <input class="check-input" name="password" type="password">
             </div>
             <div class="input-check">
                 <p>phone</p>
-                <input name = 'phone' type="text">
+                <input name='phone' class="check-input" type="text">
             </div>
-                <button class="submit" type="submit" >submit
-                    </button>
+            <button class="submit" type="submit">submit</button>
+            <p class="signIn">Already have account ? <span id="click-signIn">Sign in here</span></p>
         </div>
-      </form>
+        <div class="form2">
+            <div class="signIn-box">
+                <h3>Sign In
+                </h3>
+                <div class="input-check">
+                    <p>email</p>
+                    <input name="email" class="check-input" type="text">
+                </div>
+                <div class="input-check">
+                    <p>password</p>
+                    <input name="password" type="password">
+                </div>
+                <button class="submit" type="submit">Log in</button>
+                <div class="icon-cancel">
+                    <h1>X</h1>
+                </div>
+            </div>
+        </div>
+
+    </form>
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./jquery-validation-1.19.3/dist/additional-methods.min.js"></script>
     <script src="./jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
 
     <script>
+        $.validator.methods.password = function (value, element) {
+            return this.optional(element) || /(^[A-Z][a-z0-9+]{6,8})/.test(value);
+        }
+        $.validator.methods.phone = function (value, element) {
+            return this.optional(element) || /[0-9]{8}/.test(value);
+        }
         $("#form").validate({
             rules: {
-    // simple rule, converted to {required:true}
-    name: "required",
-    // compound rule
-    email: {
-      required: true,
-      email: true
-    }
-  }
+                // simple rule, converted to {required:true}
+                name: "required",
+                // compound rule
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    password: true
+                },
+                phone: {
+                    required: true,
+                    phone: true
+                }
+            },
+            messages: {
+                required: "không được để rỗng",
+                password: "password will in 6 to 8 characters",
+                phone: "phone is a number please"
+            }
+        });
+        $("#form").validate({
+            rules: {
+                // simple rule, converted to {required:true}
+                // compound rule
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    password: true
+                },
+            },
+            messages: {
+                password: " not correct please check again",
+            }
         });
     </script>
-  </body>
+    <script>
+        // close and open signIn box
+        $("#click-signIn").click(() => {
+            $(".signIn-box").css("display", "block")
+            $(".box1").css("display", "none")
+            $("form").css("background", "#203166")
+        })
+        $(".icon-cancel").click(() => {
+            $(".signIn-box").css("display", "none")
+            $(".box1").css("display", "block")
+            $("form").css("background", "#0f1938")
+        })
+
+        $(".icon-responsive").click(() => {
+            $(".menu").toggleClass("flex")
+        })
+
+
+        const regexName = /^[A-Z][a-z]/
+        const regexEmail = /^([a-z]|[0-9]|[A-Z])+@[a-z]{3,8}\.[a-z]{3,8}/
+        const regexPassword = /[a-zA-Z0-9]/
+        const regexPhone = /0[23456][0-9]{7}/
+        const regexDate = /[0-9]{2}\/[0-9]{2}\/[0-9]{4}/
+
+        // function showErr(listinput, pErr) {
+        //     for (let key = 0; key < listinput.length; key++) {
+        //         if (listinput[key].value == '') {
+        //             listinput[key].style.border = "5px solid red"
+        //             pErr[key].innerHTML = listinput[key].id + " không được để trống"
+        //         } else {
+        //             pErr[key].innerHTML = ''
+        //             switch (key) {
+        //                 case 0:
+        //                     showEachErr(input[0], pErr[0], regexName)
+        //                     break;
+        //                 case 1:
+        //                     showEachErr(input[1], pErr[1], regexEmail)
+        //                     break
+        //                 case 2:
+        //                     showEachErr(input[2], pErr[2], regexPassword)
+        //                     break
+        //                 case 3:
+        //                     confirmPass(input[2], input[3], pErr[3])
+        //                     break
+        //                 case 4:
+        //                     showEachErr(input[4], pErr[4], regexPhone)
+        //                     break
+        //                 case 5:
+        //                     showEachErr(input[5], pErr[5], regexDate)
+        //                     break
+        //                 default:
+        //                     break;
+        //             }
+        //         }
+        //     }
+        // }
+
+        // function confirmPass(pass1, pass2, pErr) {
+        //     if (pass2.value == pass1.value) {
+        //         pass2.style.border = "5px solid green"
+        //     } else {
+        //         pErr.innerHTML = pass2.id + " không trùng khớp"
+        //     }
+        // }
+
+        // function showEachErr(inputName, pErr, regex) {
+        //     if (regex.test(inputName.value)) {
+        //         pErr.innerHTML = ''
+        //         inputName.style.border = "5px solid green"
+
+        //     } else {
+        //         pErr.innerHTML = inputName.id + " không hợp lệ"
+        //     }
+        // }
+        // form.addEventListener("submit", (e) => {
+        //     e.preventDefault()
+        //     showErr(input, pErr)
+
+        // })
+    </script>
+</body>
+
 </html>

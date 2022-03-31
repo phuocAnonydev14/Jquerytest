@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HiZoom</title>
+    <link rel='stylesheet' href='./main.css'>
+    <link rel='stylesheet' href='./hizoom.min.css'>
+    <link rel="stylesheet" href="sass/hello.css">
+    <link rel="stylesheet" href="sass/style1.scss">
+</head>
+
+<body>
+    <div class='container'>
+        <div class='hizoom hi1'>
+            <img
+                src='https://images.unsplash.com/photo-1644982654131-79f434ac0c6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'>
+        </div>
+        <div class='hizoom hi2'>
+            <img
+                src='https://images.unsplash.com/photo-1644982654131-79f434ac0c6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ut, hic vero consequatur iure culpa labore id!
+        Tempora numquam mollitia, quasi reprehenderit nobis deleniti eaque repudiandae ex omnis blanditiis sed?</p>
+    <script src='./jquery-3.2.1.min.js'></script>
+    <script src='./hizoom.js'></script>
+    <script>
+
+        $('.hi1').hiZoom({
+            width: 300,
+            position: 'right'
+        });
+        $('.hi2').hiZoom({
+            width: 400,
+            position: 'left'
+        });
+    </script>
+</body>
+
+</html>

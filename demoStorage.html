@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="magazine" class="main2">
+        <div class="main2-box">
+            <img class="card-img"
+                src="https://www.elleman.vn/wp-content/uploads/2015/10/05/5-phong-c%C3%A1ch-%C4%91%E1%BB%93-vest-nam-kh%C3%B4ng-bao-gi%E1%BB%9D-l%E1%BB%97i-th%E1%BB%9Di-featured-image-elle-man.jpg"
+                alt="">
+            <h3 class="text-main2">fashion</h3>
+        </div>
+        <div class="main2-box">
+            <img class="card-img"
+                src="https://images.unsplash.com/photo-1611042553484-d61f84d22784?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <h3 class="text-main2">Models</h3>
+        </div>
+        <div class="main2-box">
+            <img class="card-img"
+                src="https://images.unsplash.com/photo-1619785292559-a15caa28bde6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <h3 class="text-main2">Pierre Carding</h3>
+        </div>
+        <div class="main2-box">
+            <img class="card-img"
+                src="https://images.unsplash.com/photo-1626071466175-79ab723e9fdd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGZhc2hpb24lMjBtb2RlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <h3 class="text-main2">Extra</h3>
+        </div>
+    </div>
+    <div class="main3">
+        <div class="jumbotron">
+            <p class="lead">Công ty</p>
+            <h1 class="display-3">CÔNG TY TNHH MAY THÊU GIÀY</h1>
+            <hr class="my-2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint cupiditate odit! Quaerat
+                eius, sit laboriosam incidunt explicabo quod perferendis sunt temporibus molestias aliquam hic qui ab
+                ea, facere nostrum.</p>
+            <p class="lead">
+                <a class="btn btn_custome btn-lg" href="Jumbo action link" role="button">Tìm hiểu thêm về chúng tôi</a>
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    var arr
+    var dataString = localStorage.getItem("inputVal")
+    if (dataString) {
+        arr = JSON.parse(dataString)
+    } else {
+        arr = []
+    }
+
+    document.querySelector("#button").addEventListener("click", () => {
+        var input = document.querySelector("input").value
+        arr.push(input)
+        localStorage.setItem("inputVal", JSON.stringify(arr))
+    })
+</script>
+
+</html>
